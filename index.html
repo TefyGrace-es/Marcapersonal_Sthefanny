@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --beige: #FBF3E9;
-    --white-broken: #FFFDF9;
-    --forest: #C85A2E;
-    --forest-dark: #A8431F;
-    --forest-soft: #B96B3E;
-    --mint: #F5C79E;
-    --mint-soft: #FBEAD9;
-    --mint-deep: #EDA870;
-    --sand: #F0DFC8;
-    --ink: #2E2620;
-    --ink-soft: #6B5C4E;
+    --beige: #FBF3EA;
+    --white-broken: #FFFCF8;
+    --forest: #A9714E;
+    --forest-dark: #8A5A3C;
+    --forest-soft: #BB8663;
+    --mint: #F0D6CD;
+    --mint-soft: #F8E8E2;
+    --mint-deep: #DCA99B;
+    --sand: #E8D6C3;
+    --ink: #3B2E27;
+    --ink-soft: #7C6659;
     --radius-lg: 28px;
     --radius-md: 18px;
     --radius-sm: 10px;
@@ -105,7 +105,8 @@
     text-transform: uppercase;
     color: var(--ink-soft);
   }
-  @media (max-width: 980px){ .logo-tag{ display:none; } }
+  @media (max-width: 980px){ .logo-tag{ font-size: 9px; } }
+  @media (max-width: 640px){ .logo-tag{ font-size: 8px; letter-spacing: 0.03em; } }
 
   nav.main-nav{ display:flex; align-items:center; gap: 38px; }
   nav.main-nav a{
@@ -347,6 +348,47 @@
   }
   .reveal.in{ opacity:1; transform: translateY(0); }
 
+  /* ---------- EXPERIENCIA / ESPECIALIDADES ---------- */
+  .especialidad-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .especialidad-card{
+    background: var(--white-broken);
+    border: 1px solid var(--sand);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .especialidad-card:hover{
+    transform: translateY(-5px);
+    background: var(--mint-soft);
+    border-color: var(--mint-deep);
+  }
+  .especialidad-card h3{
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--forest);
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--sand);
+  }
+  .especialidad-card p{
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 980px){
+    .especialidad-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px){
+    .especialidad-grid{ grid-template-columns: 1fr; }
+  }
+
   /* ---------- SERVICIOS ---------- */
   .servicios{ background: var(--white-broken); }
   .servicios-grid{
@@ -511,7 +553,7 @@
   footer{ padding: 70px 0 34px; }
   .footer-grid{
     display:grid;
-    grid-template-columns: 1.3fr 0.7fr 0.7fr 1fr;
+    grid-template-columns: 1.1fr 0.6fr 1.1fr 0.8fr;
     gap: 40px;
     padding-bottom: 46px;
     border-bottom: 1px solid var(--sand);
@@ -608,10 +650,10 @@
     <div class="blob blob-2"></div>
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Coaching & liderazgo</span>
+        <span class="eyebrow">Personas, Liderazgo &amp; Coaching</span>
         <h1>STHEFANNY<strong>ESPINOZA</strong></h1>
-        <p class="hero-descriptor">Personas, Liderazgo &amp; Coaching</p>
-        <p class="hero-sub">Acompaño a personas y equipos que quieren tomar decisiones con más seguridad, comunicarse mejor y liderar sin perder su esencia.</p>
+        <p class="hero-descriptor">Personas, Liderazgo &amp; Coaching · Gestión Laboral</p>
+        <p class="hero-sub">Acompaño a profesionales, líderes y equipos en sus desafíos de gestión y desarrollo, integrando más de 13 años de experiencia en Administración de Personas, gestión laboral y asesoría a líderes con herramientas de coaching.</p>
         <div class="hero-actions">
           <a href="#contacto" class="btn btn-primary">Reservar una sesión</a>
           <a href="https://wa.me/51955505959" target="_blank" rel="noopener" class="btn btn-ghost">Escribir por WhatsApp</a>
@@ -630,6 +672,39 @@
           <strong>Sthefanny Espinoza</strong>
           <p>Coaching de liderazgo y desarrollo de personas</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experiencia">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Experiencia que se traduce en resultados</span>
+        <h2>Más de una década acompañando la gestión de personas, líderes y organizaciones</h2>
+        <p>Mis áreas de especialidad:</p>
+      </div>
+      <div class="especialidad-grid">
+
+        <div class="especialidad-card reveal">
+          <h3>Personas</h3>
+          <p>Administración de Personas · Nómina · Compensaciones · People Analytics</p>
+        </div>
+
+        <div class="especialidad-card reveal">
+          <h3>Gestión laboral</h3>
+          <p>Legislación Laboral · Beneficios Sociales · Liquidaciones · Asesoría</p>
+        </div>
+
+        <div class="especialidad-card reveal">
+          <h3>Liderazgo</h3>
+          <p>Desarrollo de Líderes · Gestión de Equipos · Talleres</p>
+        </div>
+
+        <div class="especialidad-card reveal">
+          <h3>Coaching</h3>
+          <p>Coaching Profesional · Coaching para Líderes · Desarrollo</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -670,6 +745,51 @@
           <span class="tag">Organizacional</span>
         </div>
 
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg>
+          </div>
+          <h3>Gestión laboral</h3>
+          <p>Legislación Laboral · Beneficios Sociales · Liquidaciones · Asesoría. Talleres especializados.</p>
+          <span class="tag">Personas</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8"/><path d="M12 16v4"/><path d="M7 9h4M7 12h6"/></svg>
+          </div>
+          <h3>Talleres corporativos y programas</h3>
+          <p>Talleres y programas a la medida para fortalecer habilidades blandas y cultura organizacional en tu empresa.</p>
+          <span class="tag">Corporativo</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 8v8l9 5 9-5V8"/></svg>
+          </div>
+          <h3>Coaching para el desarrollo profesional</h3>
+          <p>Un espacio de acompañamiento para mirar tus desafíos desde nuevas perspectivas, identificar oportunidades y avanzar hacia tus objetivos.</p>
+          <span class="tag">Individual</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </div>
+          <h3>Coaching 1:1</h3>
+          <p>Para profesionales que buscan trabajar un objetivo específico de desarrollo.</p>
+          <span class="tag">Individual</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h11"/><path d="M11 6l6 6-6 6"/><path d="M19 5v14"/></svg>
+          </div>
+          <h3>Coaching para transición profesional</h3>
+          <p>Para profesionales que están atravesando cambios, nuevos desafíos o decisiones de carrera.</p>
+          <span class="tag">Individual</span>
+        </div>
+
       </div>
     </div>
   </section>
@@ -682,8 +802,9 @@
       <div class="sobre-copy reveal">
         <span class="eyebrow">Sobre mí</span>
         <h2>Creo en un liderazgo que se construye desde la persona, no desde el cargo</h2>
-        <p>Trabajo con líderes y equipos que buscan crecer con claridad, sin perder lo humano en el camino. Mi enfoque combina herramientas de coaching con una mirada cercana y honesta de cada proceso.</p>
-        <p>Cada sesión parte de escuchar antes de aconsejar, y de construir junto a la persona un camino que realmente le sirva a ella y a su equipo.</p>
+        <p>Soy profesional de Recursos Humanos y coach certificada por Centrum PUCP (Diplomado de Business Coaching, 2024), con más de 13 años de experiencia en gestión integral del ciclo de vida del colaborador, administración de personas y asesoría a líderes en empresas transnacionales y locales de los sectores retail, consumo masivo, educativo y outsourcing.</p>
+        <p>Actualmente soy Coordinadora de Administración de Personas en Softys Perú, liderando procesos para más de 1,600 trabajadores. Mi trayectoria incluye también Manpower Group, Grupo Trilce y Oechsle, con experiencia en relaciones laborales, entornos sindicalizados y asesoría directa a líderes. Cuento con una Especialización en Compensaciones y formación en People Analytics por la Universidad del Pacífico.</p>
+        <p>Trabajo con líderes y equipos que buscan crecer con claridad, combinando herramientas de coaching con una mirada cercana y honesta: escucho antes de aconsejar, para construir junto a la persona un camino que realmente le sirva a ella y a su equipo.</p>
         <blockquote class="quote">Un buen liderazgo no exige perfección, exige presencia.</blockquote>
         <div class="sobre-values">
           <span>Escucha activa</span>
@@ -803,6 +924,11 @@
           <li><a href="#servicios">Coaching ejecutivo</a></li>
           <li><a href="#servicios">Liderazgo de equipos</a></li>
           <li><a href="#servicios">Desarrollo de talento</a></li>
+          <li><a href="#servicios">Gestión laboral</a></li>
+          <li><a href="#servicios">Talleres corporativos y programas</a></li>
+          <li><a href="#servicios">Coaching para el desarrollo profesional</a></li>
+          <li><a href="#servicios">Coaching 1:1</a></li>
+          <li><a href="#servicios">Coaching para transición profesional</a></li>
         </ul>
       </div>
       <div class="footer-col">
